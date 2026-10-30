@@ -33,6 +33,19 @@ OM = C.OMEGA_M
 _HT_REF, _ = bg.hubble_time_times_h0(bg.E_lcdm)
 HT_MEASURED = _HT_REF
 
+# The growth index of the reference universe is *derived*, never typed.
+# An earlier version compared against the literal 0.5544, which is a magic
+# number (see docs/05_LIMITATIONS.md, defect D4).
+_GAMMA_REF = None
+
+
+def gamma_reference() -> float:
+    """gamma of the Lambda-CDM reference, recomputed on first use."""
+    global _GAMMA_REF
+    if _GAMMA_REF is None:
+        _GAMMA_REF = gw.growth_index(bg.E_lcdm, 1.0)[1]
+    return _GAMMA_REF
+
 
 @dataclass
 class Prediction:
@@ -54,8 +67,9 @@ def _status(ht: float, gamma: float) -> tuple[str, str]:
         return "EXCLUDED", f"H0*t0 off by {d_ht:.3f}"
     if np.isnan(gamma):
         return "UNDEFINED", "growth index undefined"
-    if abs(gamma - 0.5544) > 0.03:
-        return "TESTABLE", f"gamma deviates by {gamma - 0.5544:+.3f}"
+    gref = gamma_reference()
+    if abs(gamma - gref) > 0.03:
+        return "TESTABLE", f"gamma deviates by {gamma - gref:+.3f}"
     return "DEGENERATE", "indistinguishable from Lambda-CDM at background level"
 
 

@@ -12,6 +12,7 @@ abstract: >-
 version: 1.0.0
 date-released: 2026-10-30
 repository-code: "https://github.com/jonathansearch/RATISS-VERSE-I"
+doi: "10.5281/zenodo.23821392"
 license: MIT
 type: software
 authors:

@@ -7,9 +7,9 @@
    "key": "lcdm",
    "label": "Lambda-CDM",
    "family": "GR",
-   "H0_t0": 0.9507304260038759,
-   "H0_t0_quadrature_error": 1.0898302386383869e-14,
-   "comoving_distance_cH0": 0.9507304260038759,
+   "H0_t0": 0.950350929653681,
+   "H0_t0_quadrature_error": 6.620838950239288e-14,
+   "comoving_distance_cH0": 0.950350929653681,
    "E_at_1": 1.0,
    "delta_vs_lcdm": 0.0,
    "status": "DEGENERATE"
@@ -22,7 +22,7 @@
    "H0_t0_quadrature_error": 6.492195239491123e-14,
    "comoving_distance_cH0": 0.7926735485535812,
    "E_at_1": 1.0,
-   "delta_vs_lcdm": -0.15805687745029473,
+   "delta_vs_lcdm": -0.15767738110009977,
    "status": "EXCLUDED"
   },
   {
@@ -33,7 +33,7 @@
    "H0_t0_quadrature_error": 6.625393652882443e-14,
    "comoving_distance_cH0": 0.9509145103391365,
    "E_at_1": 1.0,
-   "delta_vs_lcdm": 0.00018408433526062584,
+   "delta_vs_lcdm": 0.0005635806854555891,
    "status": "DEGENERATE"
   },
   {
@@ -44,38 +44,38 @@
    "H0_t0_quadrature_error": 1.0832243470217616e-14,
    "comoving_distance_cH0": 0.950462380330693,
    "E_at_1": 1.0,
-   "delta_vs_lcdm": -0.00026804567318294836,
+   "delta_vs_lcdm": 0.00011145067701201494,
    "status": "DEGENERATE"
   },
   {
    "key": "dgp",
    "label": "DGP self-accelerating",
    "family": "braneworld",
-   "H0_t0": 0.895248874169282,
-   "H0_t0_quadrature_error": 1.0988084455202129e-14,
-   "comoving_distance_cH0": 0.895248874169282,
-   "E_at_1": 1.0,
-   "delta_vs_lcdm": -0.05548155183459391,
+   "H0_t0": 0.8948629278133284,
+   "H0_t0_quadrature_error": 6.627834863312105e-14,
+   "comoving_distance_cH0": 0.8948629278133284,
+   "E_at_1": 1.0000695621995745,
+   "delta_vs_lcdm": -0.05548800184035252,
    "status": "EXCLUDED"
   },
   {
    "key": "cardassian_05",
    "label": "Cardassian m=0.5",
    "family": "modified Friedmann",
-   "H0_t0": 0.9250280476851078,
-   "H0_t0_quadrature_error": 7.423246787582635e-13,
-   "comoving_distance_cH0": 0.9250280476851078,
+   "H0_t0": 0.9246667155482563,
+   "H0_t0_quadrature_error": 7.99328844699535e-13,
+   "comoving_distance_cH0": 0.9246667155482563,
    "E_at_1": 1.0,
-   "delta_vs_lcdm": -0.025702378318768093,
+   "delta_vs_lcdm": -0.025684214105424652,
    "status": "EXCLUDED"
   },
   {
    "key": "fr_hs",
    "label": "f(R) Hu-Sawicki",
    "family": "f(R)",
-   "H0_t0": 0.9507304260038759,
-   "H0_t0_quadrature_error": 1.0898302386383869e-14,
-   "comoving_distance_cH0": 0.9507304260038759,
+   "H0_t0": 0.950350929653681,
+   "H0_t0_quadrature_error": 6.620838950239288e-14,
+   "comoving_distance_cH0": 0.950350929653681,
    "E_at_1": 1.0,
    "delta_vs_lcdm": 0.0,
    "status": "DEGENERATE"
@@ -84,9 +84,9 @@
    "key": "ft",
    "label": "f(T) teleparallel",
    "family": "f(T)",
-   "H0_t0": 0.9507304260038759,
-   "H0_t0_quadrature_error": 1.0898302386383869e-14,
-   "comoving_distance_cH0": 0.9507304260038759,
+   "H0_t0": 0.950350929653681,
+   "H0_t0_quadrature_error": 6.620838950239288e-14,
+   "comoving_distance_cH0": 0.950350929653681,
    "E_at_1": 1.0,
    "delta_vs_lcdm": 0.0,
    "status": "DEGENERATE"
@@ -95,9 +95,9 @@
    "key": "granular",
    "label": "RATISS granular (r_c)",
    "family": "RATISS",
-   "H0_t0": 0.9507304260038759,
-   "H0_t0_quadrature_error": 1.0898302386383869e-14,
-   "comoving_distance_cH0": 0.9507304260038759,
+   "H0_t0": 0.950350929653681,
+   "H0_t0_quadrature_error": 6.620838950239288e-14,
+   "comoving_distance_cH0": 0.950350929653681,
    "E_at_1": 1.0,
    "delta_vs_lcdm": 0.0,
    "status": "DEGENERATE"
@@ -110,7 +110,7 @@
    "H0_t0_quadrature_error": 1.0977156997920911e-14,
    "comoving_distance_cH0": 0.9548818333731203,
    "E_at_1": 1.0,
-   "delta_vs_lcdm": 0.004151407369244353,
+   "delta_vs_lcdm": 0.0045309037194393165,
    "status": "EXCLUDED"
   }
  ]

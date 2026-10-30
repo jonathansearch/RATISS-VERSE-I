@@ -1,0 +1,23 @@
+{
+  "title": "RATISS Verse I: A sealed, falsifiable reference atlas of ten cosmological universes",
+  "description": "Ten cosmological universes integrated through one solver chain, sealed with SHA-256 and verified by twenty unit tests. Main result: the dimensionless age H0*t0 is degenerate to 0.059% across six models, and the target value 0.9549 is an artefact of omitting matter.",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Evina, Jonathan",
+      "affiliation": "RATISS Labs, Yaounde, Cameroon",
+      "orcid": "0009-0000-4092-5313"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "cosmology",
+    "dark energy",
+    "modified gravity",
+    "N-body simulation",
+    "falsifiability",
+    "reproducibility",
+    "open science"
+  ]
+}

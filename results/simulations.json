@@ -11,7 +11,7 @@
    "omega_m": 0.3153,
    "sigma8": 0.8111
   },
-  "runtime_s": 4.99,
+  "runtime_s": 6.3,
   "a": [
    0.02205485697671747,
    0.024320835813173146,
@@ -4432,7 +4432,7 @@
   },
   "r_c_mpc": 2.0,
   "warning": "r_c = 2 Mpc/h is excluded by the existence of dwarf galaxies; this run only demonstrates that mu(k) enters the Poisson solver correctly.",
-  "runtime_s": 5.12,
+  "runtime_s": 5.64,
   "a": [
    0.02205485697671747,
    0.024320835813173146,

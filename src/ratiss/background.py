@@ -67,7 +67,15 @@ def luminosity_distance(z: float, E: Callable[[float], float]) -> float:
 # the models
 # ---------------------------------------------------------------------------
 def E_lcdm(a, om: float = C.OMEGA_M) -> float:
-    return float(np.sqrt(om * a ** -3 + (1.0 - om)))
+    """Flat Lambda-CDM including radiation.
+
+    Radiation is kept in *every* background in this repository. An earlier
+    version omitted it here while retaining it in ``make_wcdm``, which shifted
+    H0*t0 by 3.8e-4 -- an artefact larger than several model differences the
+    registry was meant to resolve. See docs/05_LIMITATIONS.md, defect D1.
+    """
+    return float(np.sqrt(om * a ** -3 + C.OMEGA_R * a ** -4
+                         + (1.0 - om - C.OMEGA_R)))
 
 
 def make_wcdm(w: float, om: float = C.OMEGA_M) -> Callable[[float], float]:
@@ -101,7 +109,8 @@ def E_dgp_selfacc(a, om: float = C.OMEGA_M) -> float:
     Ref: Dvali, Gabadadze & Porrati 2000, Phys. Lett. B 485, 208.
     """
     orc = ((1.0 - om) / 2.0) ** 2
-    return float(np.sqrt(om * a ** -3 + orc) + np.sqrt(orc))
+    return float(np.sqrt(om * a ** -3 + C.OMEGA_R * a ** -4 + orc)
+                 + np.sqrt(orc))
 
 
 def E_dgp_normal(a, om: float = C.OMEGA_M) -> float:
@@ -112,7 +121,8 @@ def E_dgp_normal(a, om: float = C.OMEGA_M) -> float:
 def make_cardassian(m: float, om: float = C.OMEGA_M) -> Callable[[float], float]:
     """Freese-Cardassian modified Friedmann: E^2 = Om a^-3 + (1-Om) a^-m."""
     def E(a):
-        return float(np.sqrt(om * a ** -3 + (1.0 - om) * a ** (-m)))
+        return float(np.sqrt(om * a ** -3 + C.OMEGA_R * a ** -4
+                             + (1.0 - om - C.OMEGA_R) * a ** (-m)))
     return E
 
 

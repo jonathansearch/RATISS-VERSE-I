@@ -26,6 +26,7 @@ predictions.
 **Verse I** fixes the reference. Every later version is an extension of this
 one: new universes enter the registry, nothing already sealed is re-derived.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23821392.svg)](https://doi.org/10.5281/zenodo.23821392)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
 [![Reproducible](https://img.shields.io/badge/build-SHA--256%20sealed-brightgreen)](results/MANIFEST.sha256)
@@ -140,6 +141,23 @@ rather than buried.
 | Step-count convergence (40 → 80 → 160 steps) | converged |
 
 ---
+
+## The paper
+
+**RATISS Verse I: A sealed, falsifiable reference atlas of ten cosmological
+universes** — 23 pages, LaTeX, no watermarks.
+
+| | |
+|---|---|
+| Preprint (PDF) | [10.5281/zenodo.23821392](https://doi.org/10.5281/zenodo.23821392) |
+| Source | [`paper/paper.tex`](paper/paper.tex) |
+| Archived record | [zenodo.org/records/23821392](https://zenodo.org/records/23821392) |
+
+It reports the negative result the repository was built to find: `H₀t₀` is
+degenerate across six models at 0.059 %, and the target value `0.9549` is a
+statement about *emptiness*, not about any dark-energy equation of state.
+It also carries an eleven-entry register of defects found in this repository's
+own pipeline (`docs/05_LIMITATIONS.md`).
 
 ## Install and run
 
