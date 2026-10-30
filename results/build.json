@@ -1,0 +1,21 @@
+{
+ "ratsis_version": "1.0.0",
+ "python": "3.13.16",
+ "numpy": "2.3.5",
+ "built_utc": "2026-10-30T21:20:27Z",
+ "runtime_s": 24.16,
+ "files": {
+  "figures/fig01_background.png": "95258f07ea893d4f74a148abb70cfa1f30c079ed00a19ba87678eb3c9852b067",
+  "figures/fig02_growth.png": "078aa032484ae31a76d6c88f643e74097a078ec07a5977c7a41c58b93914d582",
+  "figures/fig03_discriminator.png": "0134d01c8b5acf1870ee959ae01809c2c476d7a7ee77ab2c4ac095843bc6ab1b",
+  "figures/fig04_granular.png": "7c2d3eb81b240c19acd226ba5ba252a57342806092dd564a5cf5ad804d918fbb",
+  "figures/fig05_observability.png": "1e7c511a245de9f825a0194e3d26d1beeacf1c0a1ca80829e227defb452d584b",
+  "figures/fig06_simulation.png": "917a70f1953f06fcd7487de1a68b266406e581dd7d30b7cdd70ded4ecb548290",
+  "figures/fig07_architecture.png": "554cb34cf98aa616362646202277f83794dcb93482b5a63bb4b9b7a73f391a5e",
+  "results/background.json": "c270374f96799e5ad9c0ef53dc102b9f052b0e509dec07cbd64b121c9759216e",
+  "results/granular.json": "e00efb61f58e44474980070a2574f81b5494f1598c5157f1f1331fad7a5f43ee",
+  "results/growth.json": "f82ceaa8bf3008ec115ba2ab740f7ea6bdda20e70f7c2afc127a0b768a5da82c",
+  "results/predictions.json": "c53a65e1e8531e7c06de2e6bb2168a911fa535d9c0d5660da39e0489e7e64018",
+  "results/simulations.json": "f94dd27332a030724b8461a4c0cb1084e7538eb1bd89205d958978d318941631"
+ }
+}

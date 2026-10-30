@@ -1,0 +1,126 @@
+{
+ "note": "Every entry is recomputed from the registry; nothing is typed by hand. 'status' is a computed classification, not an opinion.",
+ "reference_H0_t0": 0.9507304260038759,
+ "universes": [
+  {
+   "key": "lcdm",
+   "label": "Lambda-CDM",
+   "family": "GR",
+   "H0t0": 0.9507304260038759,
+   "H0t0_err": 1.0898302386383869e-14,
+   "gamma": 0.5543280175769011,
+   "f_z0": 0.527386067549509,
+   "fsigma8_z1": 0.43146096055924915,
+   "status": "DEGENERATE",
+   "note": "indistinguishable from Lambda-CDM at background level"
+  },
+  {
+   "key": "w_m0302",
+   "label": "w = -0.30185",
+   "family": "fluid",
+   "H0t0": 0.7926735485535812,
+   "H0t0_err": 6.492195239491123e-14,
+   "gamma": 0.5915724636483136,
+   "f_z0": 0.5051948380616973,
+   "fsigma8_z1": 0.3477930031720544,
+   "status": "EXCLUDED",
+   "note": "H0*t0 off by 0.158"
+  },
+  {
+   "key": "w_m1004",
+   "label": "w = -1.004049",
+   "family": "fluid",
+   "H0t0": 0.9509145103391365,
+   "H0t0_err": 6.625393652882443e-14,
+   "gamma": 0.554234436713785,
+   "f_z0": 0.527443035655414,
+   "fsigma8_z1": 0.4315972870188968,
+   "status": "DEGENERATE",
+   "note": "indistinguishable from Lambda-CDM at background level"
+  },
+  {
+   "key": "rvm_001",
+   "label": "RVM nu=0.001",
+   "family": "running vacuum",
+   "H0t0": 0.950462380330693,
+   "H0t0_err": 1.0832243470217616e-14,
+   "gamma": 0.5543705551933865,
+   "f_z0": 0.5273601744662137,
+   "fsigma8_z1": 0.43133211098865915,
+   "status": "DEGENERATE",
+   "note": "indistinguishable from Lambda-CDM at background level"
+  },
+  {
+   "key": "dgp",
+   "label": "DGP self-accelerating",
+   "family": "braneworld",
+   "H0t0": 0.895248874169282,
+   "H0t0_err": 1.0988084455202129e-14,
+   "gamma": 0.566299992212194,
+   "f_z0": 0.5201485456649289,
+   "fsigma8_z1": 0.4022060866138036,
+   "status": "EXCLUDED",
+   "note": "H0*t0 off by 0.055"
+  },
+  {
+   "key": "cardassian_05",
+   "label": "Cardassian m=0.5",
+   "family": "modified Friedmann",
+   "H0t0": 0.9250280476851078,
+   "H0t0_err": 7.423246787582635e-13,
+   "gamma": 0.5601131352308679,
+   "f_z0": 0.5238762518622837,
+   "fsigma8_z1": 0.4197252172501809,
+   "status": "EXCLUDED",
+   "note": "H0*t0 off by 0.026"
+  },
+  {
+   "key": "fr_hs",
+   "label": "f(R) Hu-Sawicki",
+   "family": "f(R)",
+   "H0t0": 0.9507304260038759,
+   "H0t0_err": 1.0898302386383869e-14,
+   "gamma": 0.5543280175769011,
+   "f_z0": 0.527386067549509,
+   "fsigma8_z1": 0.43146096055924915,
+   "status": "DEGENERATE",
+   "note": "indistinguishable from Lambda-CDM at background level"
+  },
+  {
+   "key": "ft",
+   "label": "f(T) teleparallel",
+   "family": "f(T)",
+   "H0t0": 0.9507304260038759,
+   "H0t0_err": 1.0898302386383869e-14,
+   "gamma": 0.5543280175769011,
+   "f_z0": 0.527386067549509,
+   "fsigma8_z1": 0.43146096055924915,
+   "status": "DEGENERATE",
+   "note": "indistinguishable from Lambda-CDM at background level"
+  },
+  {
+   "key": "granular",
+   "label": "RATISS granular (r_c)",
+   "family": "RATISS",
+   "H0t0": 0.9507304260038759,
+   "H0t0_err": 1.0898302386383869e-14,
+   "gamma": 0.5543280175769011,
+   "f_z0": 0.527386067549509,
+   "fsigma8_z1": 0.43146096055924915,
+   "status": "ALIVE-BUT-INVISIBLE",
+   "note": "cut-off below any probed scale (see docs)"
+  },
+  {
+   "key": "fluid_n2094",
+   "label": "single fluid n=2.0945",
+   "family": "Porte 1",
+   "H0t0": 0.9548818333731203,
+   "H0t0_err": 1.0977156997920911e-14,
+   "gamma": 0.5705930518110325,
+   "f_z0": 0.5175774906324108,
+   "fsigma8_z1": 0.39616030376283645,
+   "status": "EXCLUDED",
+   "note": "contains no matter: no galaxies, no structures"
+  }
+ ]
+}

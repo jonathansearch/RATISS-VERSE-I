@@ -1,0 +1,33 @@
+name: build-and-verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Physics tests
+        run: python -m pytest tests/ -v
+      - name: Full build
+        run: python scripts/build.py
+      - name: Verify sealed manifest
+        run: python scripts/verify.py
+      - name: Upload artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ratiss-results-py${{ matrix.python-version }}
+          path: |
+            results/
+            figures/

@@ -1,0 +1,117 @@
+{
+ "reference": "Planck 2018 flat Lambda-CDM",
+ "omega_m": 0.3153,
+ "H0_km_s_mpc": 67.36,
+ "universes": [
+  {
+   "key": "lcdm",
+   "label": "Lambda-CDM",
+   "family": "GR",
+   "H0_t0": 0.9507304260038759,
+   "H0_t0_quadrature_error": 1.0898302386383869e-14,
+   "comoving_distance_cH0": 0.9507304260038759,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.0,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "w_m0302",
+   "label": "w = -0.30185",
+   "family": "fluid",
+   "H0_t0": 0.7926735485535812,
+   "H0_t0_quadrature_error": 6.492195239491123e-14,
+   "comoving_distance_cH0": 0.7926735485535812,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": -0.15805687745029473,
+   "status": "EXCLUDED"
+  },
+  {
+   "key": "w_m1004",
+   "label": "w = -1.004049",
+   "family": "fluid",
+   "H0_t0": 0.9509145103391365,
+   "H0_t0_quadrature_error": 6.625393652882443e-14,
+   "comoving_distance_cH0": 0.9509145103391365,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.00018408433526062584,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "rvm_001",
+   "label": "RVM nu=0.001",
+   "family": "running vacuum",
+   "H0_t0": 0.950462380330693,
+   "H0_t0_quadrature_error": 1.0832243470217616e-14,
+   "comoving_distance_cH0": 0.950462380330693,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": -0.00026804567318294836,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "dgp",
+   "label": "DGP self-accelerating",
+   "family": "braneworld",
+   "H0_t0": 0.895248874169282,
+   "H0_t0_quadrature_error": 1.0988084455202129e-14,
+   "comoving_distance_cH0": 0.895248874169282,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": -0.05548155183459391,
+   "status": "EXCLUDED"
+  },
+  {
+   "key": "cardassian_05",
+   "label": "Cardassian m=0.5",
+   "family": "modified Friedmann",
+   "H0_t0": 0.9250280476851078,
+   "H0_t0_quadrature_error": 7.423246787582635e-13,
+   "comoving_distance_cH0": 0.9250280476851078,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": -0.025702378318768093,
+   "status": "EXCLUDED"
+  },
+  {
+   "key": "fr_hs",
+   "label": "f(R) Hu-Sawicki",
+   "family": "f(R)",
+   "H0_t0": 0.9507304260038759,
+   "H0_t0_quadrature_error": 1.0898302386383869e-14,
+   "comoving_distance_cH0": 0.9507304260038759,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.0,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "ft",
+   "label": "f(T) teleparallel",
+   "family": "f(T)",
+   "H0_t0": 0.9507304260038759,
+   "H0_t0_quadrature_error": 1.0898302386383869e-14,
+   "comoving_distance_cH0": 0.9507304260038759,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.0,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "granular",
+   "label": "RATISS granular (r_c)",
+   "family": "RATISS",
+   "H0_t0": 0.9507304260038759,
+   "H0_t0_quadrature_error": 1.0898302386383869e-14,
+   "comoving_distance_cH0": 0.9507304260038759,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.0,
+   "status": "DEGENERATE"
+  },
+  {
+   "key": "fluid_n2094",
+   "label": "single fluid n=2.0945",
+   "family": "Porte 1",
+   "H0_t0": 0.9548818333731203,
+   "H0_t0_quadrature_error": 1.0977156997920911e-14,
+   "comoving_distance_cH0": 0.9548818333731203,
+   "E_at_1": 1.0,
+   "delta_vs_lcdm": 0.004151407369244353,
+   "status": "EXCLUDED"
+  }
+ ]
+}

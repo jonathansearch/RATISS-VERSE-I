@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "RATISS: Reference Atlas of Testable Inhomogeneous Structure Simulations"
+abstract: >-
+  A reproducible, falsifiable simulator of cosmological universes. Eleven
+  universes are integrated through one shared solver chain from a common set
+  of Planck 2018 parameters to observable predictions. The repository reports
+  a degeneracy in the dimensionless age H0*t0 across five physically distinct
+  theories, identifies the growth index as the discriminating observable, and
+  derives an observational bound on the gravitational cut-off scale r_c of a
+  granular universe.
+version: 1.0.0
+date-released: 2026-10-30
+license: MIT
+type: software
+authors:
+  - name: "RATISS Project"
+keywords:
+  - cosmology
+  - dark energy
+  - modified gravity
+  - large-scale structure
+  - reproducibility
+  - N-body simulation
