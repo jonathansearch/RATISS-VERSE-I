@@ -145,7 +145,7 @@ rather than buried.
 ## The paper
 
 **RATISS Verse I: A sealed, falsifiable reference atlas of ten cosmological
-universes** — 24 pages, LaTeX, no watermarks, first person singular.
+universes** — 22 pages, LaTeX, no watermarks, first person singular.
 
 > RATISS Labs Technical Report **RATISS-TR-2026-01**.
 > Jonathan Evina — Research Scientist, RATISS Labs, Yaoundé, Cameroon.
@@ -154,9 +154,10 @@ universes** — 24 pages, LaTeX, no watermarks, first person singular.
 | | |
 |---|---|
 | Preprint (PDF) | [concept DOI 10.5281/zenodo.23821391](https://doi.org/10.5281/zenodo.23821391) — always resolves to the latest version |
-| This version | [v1.0.1 — 10.5281/zenodo.23821647](https://doi.org/10.5281/zenodo.23821647) |
+| This version | [v1.0.2 — 10.5281/zenodo.23821985](https://doi.org/10.5281/zenodo.23821985) |
 | Source | [`paper/paper.tex`](paper/paper.tex) |
-| Archived record | [zenodo.org/records/23821647](https://zenodo.org/records/23821647) |
+| PDF (real title) | [`RATISS-Verse-I_A-sealed-falsifiable-reference-atlas-of-ten-cosmological-universes_v1.0.2.pdf`](paper/RATISS-Verse-I_A-sealed-falsifiable-reference-atlas-of-ten-cosmological-universes_v1.0.2.pdf) |
+| Archived record | [zenodo.org/records/23821985](https://zenodo.org/records/23821985) |
 
 It reports the negative result the repository was built to find: `H₀t₀` is
 degenerate across six models at 0.059 %, and the target value `0.9549` is a
