@@ -1,15 +1,30 @@
 <p align="center">
-  <img src="logo/ratiss-logo.svg" width="220" alt="RATISS laboratory mark">
+  <img src="logo/ratiss-labs-mark.png" width="200" alt="RATISS Labs">
 </p>
 
-# RATISS
+<h1 align="center">RATISS Verse I</h1>
 
-**Reference Atlas of Testable Inhomogeneous Structure Simulations**
+<p align="center"><b>Reference Atlas of Testable Inhomogeneous Structure Simulations</b></p>
+
+<p align="center">The laboratory's first full reference universe: ten cosmologies
+integrated through one solver chain, from a common Planck 2018 parameter set to
+observable predictions.</p>
+
+---
+
+> **Lineage.** SYNTORON 24 was a toy: 24 particles, one dimensionless number,
+> one output. RATISS Verse I is the replacement reference. It is not a toy —
+> it is a simulator with a background solver, a growth solver, a particle-mesh
+> engine, a falsifiability matrix and a sealed build. **New work starts here.**
+> The toy is kept only as the origin of the `r_c` question.
 
 A reproducible, falsifiable simulator of cosmological universes — each defined
 by three ingredients (background expansion, linear growth, local gravitational
 coupling) and propagated through one shared solver chain to observable
 predictions.
+
+**Verse I** fixes the reference. Every later version is an extension of this
+one: new universes enter the registry, nothing already sealed is re-derived.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)

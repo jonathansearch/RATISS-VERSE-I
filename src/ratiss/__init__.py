@@ -1,5 +1,5 @@
 """
-RATISS — Reference Atlas of Testable Inhomogeneous Structure Simulations.
+RATISS Verse I — Reference Atlas of Testable Inhomogeneous Structure Simulations.
 
 A reference implementation of a family of cosmological universes, each
 defined by three ingredients (background expansion, linear growth, local

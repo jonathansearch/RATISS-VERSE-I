@@ -3,6 +3,9 @@
 For every universe in the registry: **what observation would kill it**, and
 **which instrument can make that observation**.
 
+*Applies to RATISS Verse I. Any universe added in a later verse inherits the
+same obligation: a registry entry without a kill condition is not admitted.*
+
 A model that cannot be killed is not a scientific model. This document is
 therefore the operative one.
 

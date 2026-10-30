@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "RATISS: Reference Atlas of Testable Inhomogeneous Structure Simulations"
+title: "RATISS Verse I: Reference Atlas of Testable Inhomogeneous Structure Simulations"
 abstract: >-
   A reproducible, falsifiable simulator of cosmological universes. Eleven
   universes are integrated through one shared solver chain from a common set
@@ -11,6 +11,7 @@ abstract: >-
   granular universe.
 version: 1.0.0
 date-released: 2026-10-30
+repository-code: "https://github.com/jonathansearch/RATISS-VERSE-I"
 license: MIT
 type: software
 authors:

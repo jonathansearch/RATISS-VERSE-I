@@ -176,7 +176,7 @@ def main() -> int:
 
     t_start = time.time()
     print("=" * 72)
-    print(f"RATISS reference universe build  v{__version__}")
+    print(f"RATISS Verse I — reference universe build  v{__version__}")
     print("=" * 72)
 
     b = build_background()

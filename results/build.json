@@ -2,8 +2,8 @@
  "ratsis_version": "1.0.0",
  "python": "3.13.16",
  "numpy": "2.3.5",
- "built_utc": "2026-10-30T21:20:27Z",
- "runtime_s": 24.16,
+ "built_utc": "2026-10-30T21:25:28Z",
+ "runtime_s": 23.1,
  "files": {
   "figures/fig01_background.png": "95258f07ea893d4f74a148abb70cfa1f30c079ed00a19ba87678eb3c9852b067",
   "figures/fig02_growth.png": "078aa032484ae31a76d6c88f643e74097a078ec07a5977c7a41c58b93914d582",
@@ -16,6 +16,6 @@
   "results/granular.json": "e00efb61f58e44474980070a2574f81b5494f1598c5157f1f1331fad7a5f43ee",
   "results/growth.json": "f82ceaa8bf3008ec115ba2ab740f7ea6bdda20e70f7c2afc127a0b768a5da82c",
   "results/predictions.json": "c53a65e1e8531e7c06de2e6bb2168a911fa535d9c0d5660da39e0489e7e64018",
-  "results/simulations.json": "f94dd27332a030724b8461a4c0cb1084e7538eb1bd89205d958978d318941631"
+  "results/simulations.json": "04583a9671e6b82c8c9ee2213ff2ae458db173af91e25732b2b2c5ea11ced8de"
  }
 }
