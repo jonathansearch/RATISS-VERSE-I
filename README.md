@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo/ratiss-labs-mark.png" width="200" alt="RATISS Labs">
+  <img src="logo/ratiss-labs-logo.png" width="300" alt="RATISS Labs">
 </p>
 
 <h1 align="center">RATISS Verse I</h1>

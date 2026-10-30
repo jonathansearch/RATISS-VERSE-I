@@ -21,6 +21,6 @@ python scripts/verify.py
 
 ## Provenance of the laboratory mark
 
-`logo/ratiss-labs-mark.png` is the existing RATISS Labs logo, taken unchanged
-from `jonathansearch/Ratiss-Jonathan-Labs-` (`docs/assets/logo.png`). Its
+`logo/ratiss-labs-logo.png` is the existing RATISS Labs logo, taken unchanged
+from `jonathansearch/RATISS-Framework` (`docs/img/logo-ratiss-labs.png`). Its
 SHA-256 is recorded in `logo/CREDITS.md`. It was not redrawn or regenerated.
