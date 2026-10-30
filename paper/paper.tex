@@ -41,23 +41,85 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small RATISS Verse I}
+\fancyhead[L]{\small RATISS Labs \textbullet\ RATISS Verse I}
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 
-\title{\vspace{-1.2cm}\textbf{RATISS Verse I}\\[0.3em]
-\large A sealed, falsifiable reference atlas of ten cosmological universes}
-
-\author{Jonathan Evina\thanks{\raggedright RATISS Labs, Yaound\'e, Cameroon. ORCID 0009-0000-4092-5313. Correspondence: \texttt{jonathan.ratisslabs@zohomail.com}.}}
-\date{30 October 2026 \quad\textbullet\quad Version 1.0.0}
+\hypersetup{
+  pdftitle={RATISS Verse I: A sealed, falsifiable reference atlas of ten cosmological universes},
+  pdfauthor={Jonathan Evina},
+  pdfsubject={Cosmology, dark energy, modified gravity, N-body simulation, reproducibility},
+  pdfkeywords={cosmology, dark energy, modified gravity, N-body simulation, falsifiability, reproducibility},
+  pdfcreator={LaTeX with Tectonic},
+}
 
 \begin{document}
 
-\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+
+\vspace*{0.6cm}
+
+\includegraphics[width=2.7cm]{ratiss-labs-logo.png}
+
+\vspace{1.0cm}
+
+{\LARGE\bfseries RATISS Verse I\par}
+
+\vspace{0.45cm}
+
+{\large A sealed, falsifiable reference atlas of ten cosmological universes\par}
+
+\vspace{1.1cm}
+
+\rule{\textwidth}{0.5pt}
+
+\vspace{0.9cm}
+
+{\Large Jonathan Evina\par}
+
+\vspace{0.35cm}
+
+{\normalsize Research Scientist, RATISS Labs\par}
+
+\vspace{0.25cm}
+
+{\small Yaound\'e, Cameroon\par}
+
+\vspace{0.35cm}
+
+{\small ORCID: 0009-0000-4092-5313\par}
+
+\vspace{0.12cm}
+
+{\small\texttt{jonathan.ratisslabs@zohomail.com}\par}
+
+\vspace{0.9cm}
+
+\rule{\textwidth}{0.5pt}
+
+\vspace{0.55cm}
+
+{\small RATISS Labs \textbullet\ Technical Report RATISS-TR-2026-01\par}
+
+\vspace{0.15cm}
+
+{\small 30 October 2026 \textbullet\ Version 1.0.1\par}
+
+\vspace{0.12cm}
+
+{\small\href{https://doi.org/10.5281/zenodo.23821391}{\texttt{doi:10.5281/zenodo.23821391}} (all versions)\par}
+
+\vspace{0.5cm}
+
+\end{center}
+
+\vspace{0.3cm}
 
 \begin{abstract}
 \noindent
-We present \textsc{Ratiss Verse I}, a reference atlas in which ten distinct
+I present \textsc{Ratiss Verse I}, a reference atlas in which ten distinct
 cosmological models are integrated through a \emph{single} solver chain: one
 background quadrature, one linear growth equation, and one particle--mesh
 $N$-body engine. Every number in the atlas is recomputed from a frozen
@@ -65,7 +127,7 @@ parameter set at build time; nothing is transcribed by hand; every produced
 artefact is sealed with a SHA-256 manifest.
 
 The atlas is built to answer one question honestly: \emph{which of these ten
-universes is actually distinguishable from $\Lambda$CDM?} Our answer is
+universes is actually distinguishable from $\Lambda$CDM?} My answer is
 uncomfortable. Six models --- $\Lambda$CDM, $f(R)$ Hu--Sawicki, $f(T)$
 teleparallel, a running-vacuum model with $\nu=10^{-3}$, a constant-$w$ fluid
 at $w=-1.004$, and the RATISS granular universe --- agree on $H_0t_0$ to
@@ -74,8 +136,8 @@ within $5.6\times10^{-4}$ ($0.06\%$). The dimensionless age is therefore
 $\gamm$ separates them at the $6.7\%$ level ($0.5542 \to 0.5916$), which is
 within reach of stage-IV surveys.
 
-We report four analytic results and one negative result of some weight. The
-negative result concerns the widely quoted target $H_0t_0 = 0.9549$: we show
+I report four analytic results and one negative result of some weight. The
+negative result concerns the widely quoted target $H_0t_0 = 0.9549$: I show
 it is not a property of any equation of state but of \emph{emptiness}. A
 universe containing a single substance with $\rho \propto a^{-n}$ has
 $\Hzt = 2/n$ exactly; with $n = 2.0945$ this gives $0.95488$. Adding the
@@ -84,10 +146,10 @@ $11.51$~Gyr, below the age of the oldest stars. Reproducing $0.9549$ with
 matter present requires a \emph{phantom} equation of state, $w = -1.0332$,
 or $\Omm = 0.3100$.
 
-We also report the defects we found in our own pipeline, including a
+I also report the defects I found in my own pipeline, including a
 radiation-inconsistency between model families that shifted $\Hzt$ by
 $3.8\times10^{-4}$ --- larger than several effects the atlas was built to
-resolve --- and we give the corrected values throughout.
+resolve --- and I give the corrected values throughout.
 
 Every figure, table and hash in this document can be regenerated with one
 command. The repository is the artefact.
@@ -155,7 +217,7 @@ else in the toy is retired.
 \item A negative result of general interest: the $0.9549$ target that
       motivated a family of single-fluid models is an artefact of the absence
       of matter (Section~\ref{sec:negative}).
-\item A documented list of the defects found in our own pipeline, with the
+\item A documented list of the defects found in my own pipeline, with the
       corrected numbers
       (Section~\ref{sec:defects} and Appendix~\ref{app:defects}).
 \item Cryptographic sealing: twelve artefacts, SHA-256 manifest, verification
@@ -165,7 +227,7 @@ else in the toy is retired.
 
 \subsection{Conventions}
 
-Unless stated otherwise we use Planck 2018 TT,TE,EE+lowE+lensing values
+Unless stated otherwise I use Planck 2018 TT,TE,EE+lowE+lensing values
 \cite{planck2018}: $\Omm = 0.3153$, $\OmL = 1-\Omm-\Omr$, $\Omr = 9.15\times
 10^{-5}$ (photons plus three massless neutrinos), $H_0 = 67.36\kms$
 ($h = 0.6736$), $\sigma_8 = 0.8111$, $n_s = 0.9649$.
@@ -190,7 +252,7 @@ all three. Two universes are \emph{degenerate} here if they produce the same
 value of a given observable, regardless of whether they differ physically.
 The distinction matters: Section~\ref{sec:results} contains universes that are
 degenerate by measurement and universes that are degenerate by construction,
-and we label them separately.
+and I label them separately.
 
 \subsection{Background}
 
@@ -206,7 +268,7 @@ D_C(z) &= \frac{c}{H_0}\int_0^{z} \frac{\mathrm{d}z'}{E(z')}.
 Equation~\eqref{eq:h0t0} is the quantity that motivated this project, and
 Section~\ref{sec:negative} is devoted to it.
 
-We integrate in $\ln a$ from $a = e^{-60}$ to $a = 1$ using adaptive
+I integrate in $\ln a$ from $a = e^{-60}$ to $a = 1$ using adaptive
 quadrature with two tolerance settings; the reported uncertainty is the
 difference between the two runs plus the first run's own error estimate. It
 is a \emph{quadrature} error of order $10^{-14}$, not a physical uncertainty.
@@ -261,7 +323,7 @@ The minimal bounded regularisation that reproduces the three exact limits is
 \qquad x \equiv k\,r_c,
 \label{eq:mu}
 \end{equation}
-with $\mu(0^{+}) = +1$, $\mu(1) = 0$, $\mu(\infty) = -1$. We state plainly that
+with $\mu(0^{+}) = +1$, $\mu(1) = 0$, $\mu(\infty) = -1$. I state plainly that
 Eq.~\eqref{eq:mu} is an \emph{interpolation}, not a derived transform, and
 that the mapping from $r_c$ to $x$ is a modelling assumption (defect~D7).
 
@@ -337,8 +399,8 @@ t_0 = 13.7952~\mathrm{Gyr}.
 Planck 2018 reports $13.801 \pm 0.024$~Gyr \cite{planck2018}. The agreement,
 $\Delta = -0.006$~Gyr, is an \emph{independent} check of the whole background
 pipeline: this number was produced by quadrature over $E(a)$, not copied.
-We regard it as the single most important validation in this work, because it
-is a comparison against a number we did not compute.
+I regard it as the single most important validation in this work, because it
+is a comparison against a number I did not compute.
 
 \begin{table}[t]
 \centering
@@ -515,7 +577,7 @@ Equations~\eqref{eq:h0t0}--\eqref{eq:dc} are evaluated with adaptive
 Gauss--Kronrod quadrature in $\ln a$ over $[-60, 0]$. Each integral is
 computed twice with $\mathrm{epsabs} = 10^{-12}$ and $10^{-9}$; the reported
 error is $|I_{12} - I_9| + \epsilon_{12}$. The resulting quantities are
-accurate to $\sim 10^{-13}$, i.e.\ to the level of double precision. We
+accurate to $\sim 10^{-13}$, i.e.\ to the level of double precision. I
 emphasise once more: this number quantifies the integration, not the physics.
 
 \subsection{Linear growth}
@@ -526,14 +588,14 @@ differencing of $\ln H^2$ with step $10^{-4}$, an error of order $10^{-8}$
 relative, negligible against the model uncertainties discussed in
 Section~\ref{sec:defects}.
 
-The growth index $\gamm$ is evaluated at $z = 0$. For $\Lambda$CDM we obtain
+The growth index $\gamm$ is evaluated at $z = 0$. For $\Lambda$CDM I obtain
 $\gamm = 0.55436$, consistent with the classical result $\gamm \approx 0.55$
 for a $\Lambda$CDM cosmology \cite{peebles1993,lahav1991}. The exact value
-depends on $\Omm$; we report ours for $\Omm = 0.3153$.
+depends on $\Omm$; I report mine for $\Omm = 0.3153$.
 
 \subsection{The granular sector}
 
-For a grid of $x = k r_c \in [10^{-3}, 1]$ we set
+For a grid of $x = k r_c \in [10^{-3}, 1]$ I set
 $\mu = (1-x^2)/(1+x^2)$ in Eq.~\eqref{eq:growth} and record $\gamm$ and
 $D/D_{\Lambda\mathrm{CDM}}$. The result is a monotone suppression: at
 $x = 1$ the growth factor has collapsed to
@@ -545,7 +607,7 @@ generates the tension of Section~\ref{sec:granular}.
 \subsection{Particle-mesh engine}
 
 The $N$-body engine is a standard particle-mesh code with periodic boundary
-conditions, written for this work. We give its equations in full because the
+conditions, written for this work. I give its equations in full because the
 sealing claim depends on them being checkable.
 
 \paragraph{Units.} Comoving positions $\mathbf{x} \in [0,1)$ in box units;
@@ -711,9 +773,9 @@ The force law \eqref{eq:force} translates into the coupling
 D/D_{\Lambda\mathrm{CDM}} = 1.05\times10^{-3}\ \text{at}\ x = 1 .
 \end{equation}
 So the model has a large, unmistakable signature --- \emph{if} $r_c$ happens
-to land where we can see it.
+to land where it would be visible.
 
-Where can we see it? The cut-off deviates from Newton by an amount of order
+Where can I see it? The cut-off deviates from Newton by an amount of order
 unity when $k r_c \sim 1$. The scales probed by galaxy surveys are
 $0.01 < k < 0.3\ \mathrm{h\,Mpc^{-1}}$, so an observable effect requires
 \begin{equation}
@@ -766,8 +828,8 @@ falsified; it is hidden by construction.}
 \paragraph{Verdict.} The granular universe is \emph{not} excluded. It is
 \emph{unobservable}: the value of $r_c$ that would produce a visible
 signature is larger, by five to ten orders of magnitude, than the value
-permitted by the existence of dwarf galaxies and dark microhalos. We label it
-\textsc{alive--but--invisible} and we consider that label the honest one.
+permitted by the existence of dwarf galaxies and dark microhalos. I label it
+\textsc{alive--but--invisible} and I consider that label the honest one.
 A model that is alive but invisible is, operationally, indistinguishable from
 a model that is wrong --- but it is not the same thing, and the difference is
 worth recording.
@@ -785,7 +847,7 @@ total: at $x=1$ essentially no growth survives.}
 \section{Falsifiability}
 \label{sec:falsifiability}
 
-For every universe we state what measurement would remove it. This section is
+For every universe I state what measurement would remove it. This section is
 the reason the atlas exists.
 
 \begin{table}[h]
@@ -822,13 +884,13 @@ single fluid $n=2.0945$ & the existence of galaxies & \textbf{excluded} \\
 \end{table}
 
 Two entries in Table~\ref{tab:kill} require comment, because they are the
-ones where we are least comfortable.
+ones where I am least comfortable.
 
 \paragraph{$\Lambda$CDM is not safe.} The DESI DR2 analysis \cite{desi2024}
 finds a $3.1\sigma$ preference for $w_0 > -1$, $w_a < 0$ when BAO, CMB and
 supernovae are combined. This atlas does not model evolving dark energy, so it
 cannot contribute to that debate directly. It can say what the cost would be:
-a deviation of the size DESI reports would move $\Hzt$ by an amount we have
+a deviation of the size DESI reports would move $\Hzt$ by an amount I have
 not yet computed, and that computation is the obvious next step.
 
 \paragraph{The granular row is a conditional.} The statement ``excluded for
@@ -889,20 +951,20 @@ Gyr; globular clusters give $\sim 12.5$--$13$~Gyr). The model is therefore
 \begin{remark}
 The number $0.9549$ was never wrong. What was wrong was the implicit
 assumption that a universe can consist of a single fluid and still be
-\emph{our} universe. The identity $\Hzt = 2/n$ is a statement about
+\emph{my} universe. The identity $\Hzt = 2/n$ is a statement about
 emptiness dressed as a statement about dark energy.
 \end{remark}
 
 \subsection{Other failures, stated briefly}
 
 \begin{enumerate}[label=\textbf{N\arabic*.}]
-\item \textbf{The $\Hzt$ discriminator does not exist.} We spent the first
+\item \textbf{The $\Hzt$ discriminator does not exist.} I spent the first
 half of this project looking for a model that could be distinguished by its
 dimensionless age. Six of ten are degenerate at $0.06\%$. The search failed.
 
-\item \textbf{$f(R)$ and $f(T)$ rows are vacuous.} We set $\mu = 1$ and
+\item \textbf{$f(R)$ and $f(T)$ rows are vacuous.} I set $\mu = 1$ and
 $E = E_{\Lambda\mathrm{CDM}}$ for both. They reproduce $\Lambda$CDM exactly,
-as they must. Reporting them as ``degenerate'' would be circular; we report
+as they must. Reporting them as ``degenerate'' would be circular; I report
 them as unimplemented.
 
 \item \textbf{The granular registry row is also vacuous}, for the same reason.
@@ -916,7 +978,7 @@ $k_{\mathrm{Ny}} \approx 1.0\ h\,\mathrm{Mpc^{-1}}$, and the smallest bins
 contain 6 modes. The run demonstrates that the engine conserves, drifts,
 kicks and deposits; it does not constitute a cosmology result. Defect~D9.
 
-\item \textbf{$f\sigma_8$ is normalised, not predicted.} We fix $\sigma_8$ to
+\item \textbf{$f\sigma_8$ is normalised, not predicted.} I fix $\sigma_8$ to
 the Planck value. An overall amplitude is therefore an input, not an output.
 
 \item \textbf{No baryons, no neutrinos, no radiation in the growth equation.}
@@ -927,7 +989,7 @@ is quantified here.
 \end{enumerate}
 
 %======================================================================
-\section{Defects found in our own pipeline}
+\section{Defects found in my own pipeline}
 \label{sec:defects}
 
 The atlas is presented as a reference. It would be dishonest to present it as
@@ -986,7 +1048,7 @@ actual quantity they are compared against spans four orders of magnitude:
 $5.6\times10^{-4}$ (degenerate group) to $1.6\times10^{-1}$ ($w = -0.302$).
 A threshold at $0.02$ sits in the middle of nothing; it is a conventional
 cut, and the labels derived from it should be read as an ordering, not as a
-measurement. We have not replaced them, because replacing an arbitrary
+measurement. I have not replaced them, because replacing an arbitrary
 threshold with a differently arbitrary one is not an improvement.
 
 \subsection{D4: a magic number in the classifier (fixed)}
@@ -1032,7 +1094,7 @@ because $\Hzt$ is not directly measured. The word \textsc{excluded} in
 Table~\ref{tab:predictions} therefore means ``differs from $\Lambda$CDM by
 more than the chosen threshold'', not ``is ruled out by observation''.
 
-Where a genuine observational argument exists we have made it separately, in
+Where a genuine observational argument exists I have made it separately, in
 physical units: the $w = -0.302$ universe is excluded by stellar ages
 (Section~\ref{sec:negative}), and that is a real falsification. The other
 \textsc{excluded} labels are not.
@@ -1178,11 +1240,11 @@ surveys can reach, and it is the only handle this atlas offers.
 A repository that reports only what worked is a marketing document. This
 one contains three rows that are degenerate by construction, one row with a
 stale label, a simulation that does not resolve what it should, and a
-correction to its own central result. We list them because a reader who
-rederives our numbers will find them, and because the alternative ---
+correction to its own central result. I list them because a reader who
+rederives my numbers will find them, and because the alternative ---
 presenting ten universes as ten successes --- would be false.
 
-The negative result of Section~\ref{sec:negative} is, we think, the most
+The negative result of Section~\ref{sec:negative} is, I think, the most
 valuable thing in this paper. It generalises: whenever a cosmological
 constraint can be reproduced by a single fluid, one should ask what the
 constraint becomes once matter is restored. The answer is often much weaker.
@@ -1194,7 +1256,7 @@ constraint becomes once matter is restored. The answer is often much weaker.
       $f(R)$ row actual content and would likely break the degeneracy at the
       percent level.
 \item Including massive neutrinos would shift the growth rate and could move
-      $\gamm$ by a comparable amount to the spread we report.
+      $\gamm$ by a comparable amount to the spread I report.
 \item An evolving dark-energy sector ($w_0, w_a$) is where the observational
       debate currently is; this atlas does not model it.
 \item A production $N$-body run would turn the engine demonstration into a
@@ -1205,7 +1267,7 @@ constraint becomes once matter is restored. The answer is often much weaker.
 \section{Conclusion}
 \label{sec:conclusion}
 
-We have built a reference atlas of ten cosmological universes integrated
+I have built a reference atlas of ten cosmological universes integrated
 through a single solver chain, sealed with SHA-256, verified by twenty unit
 tests, and reproducible in 27 seconds.
 
@@ -1264,7 +1326,7 @@ E(a) = \sqrt{\Omm a^{-3} + \Omega_{rc}} + \sqrt{\Omega_{rc}},
 \label{app:defects}
 
 Table~\ref{tab:defects} in Section~\ref{sec:defects} is the complete register.
-It is reproduced here as a cross-reference because we expect readers to arrive
+It is reproduced here as a cross-reference because I expect readers to arrive
 at it from the data, not from the prose.
 
 %======================================================================

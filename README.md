@@ -26,7 +26,7 @@ predictions.
 **Verse I** fixes the reference. Every later version is an extension of this
 one: new universes enter the registry, nothing already sealed is re-derived.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23821392.svg)](https://doi.org/10.5281/zenodo.23821392)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23821391.svg)](https://doi.org/10.5281/zenodo.23821391)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
 [![Reproducible](https://img.shields.io/badge/build-SHA--256%20sealed-brightgreen)](results/MANIFEST.sha256)
@@ -145,13 +145,18 @@ rather than buried.
 ## The paper
 
 **RATISS Verse I: A sealed, falsifiable reference atlas of ten cosmological
-universes** — 23 pages, LaTeX, no watermarks.
+universes** — 24 pages, LaTeX, no watermarks, first person singular.
+
+> RATISS Labs Technical Report **RATISS-TR-2026-01**.
+> Jonathan Evina — Research Scientist, RATISS Labs, Yaoundé, Cameroon.
+> ORCID [0009-0000-4092-5313](https://orcid.org/0009-0000-4092-5313).
 
 | | |
 |---|---|
-| Preprint (PDF) | [10.5281/zenodo.23821392](https://doi.org/10.5281/zenodo.23821392) |
+| Preprint (PDF) | [concept DOI 10.5281/zenodo.23821391](https://doi.org/10.5281/zenodo.23821391) — always resolves to the latest version |
+| This version | [v1.0.1 — 10.5281/zenodo.23821647](https://doi.org/10.5281/zenodo.23821647) |
 | Source | [`paper/paper.tex`](paper/paper.tex) |
-| Archived record | [zenodo.org/records/23821392](https://zenodo.org/records/23821392) |
+| Archived record | [zenodo.org/records/23821647](https://zenodo.org/records/23821647) |
 
 It reports the negative result the repository was built to find: `H₀t₀` is
 degenerate across six models at 0.059 %, and the target value `0.9549` is a

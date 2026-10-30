@@ -467,41 +467,41 @@ Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
 )
 \c@theorem=\count317
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 55.
+h' as default language. on input line 56.
  (paper.aux)
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
-5.
+6.
 
 (ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Info: Redefining \microtypecontext on input line 55.
-Package microtype Info: Applying patch `item' on input line 55.
-Package microtype Info: Applying patch `toc' on input line 55.
-Package microtype Info: Applying patch `eqnum' on input line 55.
-Package microtype Info: Applying patch `footnote' on input line 55.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Info: Redefining \microtypecontext on input line 56.
+Package microtype Info: Applying patch `item' on input line 56.
+Package microtype Info: Applying patch `toc' on input line 56.
+Package microtype Info: Applying patch `eqnum' on input line 56.
+Package microtype Info: Applying patch `footnote' on input line 56.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -550,8 +550,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 55.
-Package hyperref Info: Link coloring OFF on input line 55.
+or `english'. on input line 56.
+Package hyperref Info: Link coloring OFF on input line 56.
  (nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (refcount.sty
@@ -562,129 +562,123 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count318
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
  (paper.out) (paper.out)
 \@outlinefile=\write4
 \openout4 = `paper.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-8.
- (ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-8.
- (omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-58.
-
-(omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-58.
- (omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 58.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 58.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 58.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
-
- (umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
-
- (umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 58.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 58.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-8.
-
-(t1lmtt.fd
+File: ratiss-labs-logo.png Graphic file (type bmp)
+<ratiss-labs-logo.png>
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
+6.
+ (t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
-[][]\T1/lmr/m/n/9 RATISS Labs, Yaoundé, Cameroon. OR-CID 0009-0000-4092-5313. C
-or-re-spon-dence:
- []
-
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 64.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 64.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 99.
-(paper.toc [1
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+25.
+ (ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+25.
 
-] [2])
+(omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+125.
+ (omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+125.
+ (omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 125.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 125.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 125
+.
+ (umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 125
+.
+ (umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 160.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 160.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 160.
+ (paper.toc [2] [3])
 \tf@toc=\write5
 \openout5 = `paper.toc'.
 
- [3]
+ [4]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [4] [5]
+ [5] [6]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 310.
- [6]
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 371.
+ [7]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 427.
 File: figures/fig01_background.png Graphic file (type bmp)
 <figures/fig01_background.png>
- [7]
+ [8]
 
 LaTeX Font Warning: Font shape `T1/lmr/m/scit' undefined
-(Font)              using `T1/lmr/m/scsl' instead on input line 409.
+(Font)              using `T1/lmr/m/scsl' instead on input line 470.
 
-[8] [9]
+[9] [10]
 File: figures/fig06_simulation.png Graphic file (type bmp)
 <figures/fig06_simulation.png>
 File: figures/fig07_architecture.png Graphic file (type bmp)
 <figures/fig07_architecture.png>
- [10]
+ [11]
 File: figures/fig02_growth.png Graphic file (type bmp)
 <figures/fig02_growth.png>
 File: figures/fig03_discriminator.png Graphic file (type bmp)
 <figures/fig03_discriminator.png>
- [11] [12]
+ [12] [13]
 File: figures/fig05_observability.png Graphic file (type bmp)
 <figures/fig05_observability.png>
 File: figures/fig04_granular.png Graphic file (type bmp)
 <figures/fig04_granular.png>
 
-Underfull \hbox (badness 5417) in paragraph at lines 805--806
+Underfull \hbox (badness 5417) in paragraph at lines 866--867
 []|\T1/lmr/m/n/10 stellar ages: pre-dicts $\OML/lmm/m/it/10 t[] \OT1/lmr/m/n/10
  =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--814
+Underfull \hbox (badness 10000) in paragraph at lines 875--875
 []|$\OML/lmm/m/it/10 f\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 R\OT1/lmr/m/n/10 )$ \T1
 /lmr/m/n/10 Hu--
  []
@@ -692,30 +686,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 814--814
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13]
+[14]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 908.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 847.
+(hyperref)                removing `math shift' on input line 908.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 847.
+(hyperref)                removing `math shift' on input line 908.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] [15] [16] [17]
+[15] [16] [17] [18]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18] [19] [20]
-Overfull \hbox (9.64714pt too wide) in paragraph at lines 1295--1300
+[19] [20] [21]
+Overfull \hbox (9.64714pt too wide) in paragraph at lines 1356--1361
 []\T1/lmr/m/n/10.95 The five JSON arte-facts are sub-ject to the same scheme. N
 ote that the hash of \T1/lmtt/m/n/10.95 results/build.json
  []
 
-[21] [22] [23] (paper.aux)
+[22] [23] [24] (paper.aux)
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: EEE26121581753BE7A3341A1154EC870;10721.
+(rerunfilecheck)             Checksum: 6F1E941FADDA5F6413CF2B0B1A2A1735;10716.
  )
-Output written on paper.xdv (23 pages, 143168 bytes).
+Output written on paper.xdv (24 pages, 143316 bytes).
