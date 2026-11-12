@@ -27,6 +27,9 @@ from . import growth as gw
 
 
 OM = C.OMEGA_M
+# Representative wavenumber, in h/Mpc, at which the f(R) sector is quoted --
+# where DESI and Euclid have sensitivity. Scale-free models do not use it.
+K_REF = 0.1
 # The observed expansion history is the best-fit Lambda-CDM one. Every model
 # is therefore compared with Lambda-CDM computed at the *same* Omega_m, so
 # that the comparison isolates the model and not the choice of parameters.
@@ -137,4 +140,56 @@ def observable_window() -> dict:
         "r_c_bound_from_microhalos_mpc": rc_bound_micro,
         "gap_dex_dwarfs": float(np.log10(rc_needed_lo / rc_bound_dwarf)),
         "gap_dex_microhalos": float(np.log10(rc_needed_lo / rc_bound_micro)),
+    }
+
+
+# ---------------------------------------------------------------------------
+# the f(R) sector: chameleon screening, a genuine scale-dependent signature
+# ---------------------------------------------------------------------------
+def fr_sector(f_r0_values=(1e-4, 1e-5, 1e-6, 1e-7), k_ref: float = K_REF) -> dict:
+    """Growth and screening of Hu--Sawicki f(R) versus |f_R0|.
+
+    This addresses defect D6 (docs/05_LIMITATIONS.md): the f(R) registry row
+    is vacuous because it uses mu = 1. Here the background stays Lambda-CDM
+    by construction, so any deviation is produced by the scalaron and is
+    therefore a real, testable effect. The sealed registry is deliberately
+    left untouched, exactly as the granular cut-off lives in its own sector.
+    """
+    from . import fr as frmod
+
+    _, D_gr, _, _ = gw.growth_factor(bg.E_lcdm, 1.0, k_ref, N_fin=0.0)
+    _, g_gr = gw.growth_index(bg.E_lcdm, 1.0, k_ref)
+    rows = []
+    for fR0 in f_r0_values:
+        mu = frmod.mu_fR_callable(fR0)
+        f, gam = gw.growth_index(bg.E_lcdm, mu, k_ref)
+        fs8 = gw.f_sigma8(bg.E_lcdm, mu, k_ref)
+        fs8_z1 = next(r["f_sigma8"] for r in fs8 if r["z"] == 1.0)
+        _, D, _, _ = gw.growth_factor(bg.E_lcdm, mu, k_ref, N_fin=0.0)
+        rows.append({
+            "f_R0": fR0,
+            "compton_wavelength_mpc_h": frmod.compton_wavelength_today(fR0),
+            "mu_at_k_ref": float(frmod.mu_fR(k_ref, 1.0, fR0)),
+            "gamma": gam,
+            "delta_gamma": gam - g_gr,
+            "f_sigma8_z1": fs8_z1,
+            "D_rel_vs_lcdm": D / D_gr,
+            "screened": bool(abs(gam - g_gr) < 1e-3),
+        })
+    # scale dependence at a fixed |f_R0|: the shape of the signature
+    ks = np.logspace(-3, 1, 24)
+    k_scan = [{
+        "k_h_mpc": float(k),
+        "mu": float(frmod.mu_fR(k, 1.0, 1e-5)),
+        "gamma": gw.growth_index(bg.E_lcdm, frmod.mu_fR_callable(1e-5), k)[1],
+    } for k in ks]
+    return {
+        "model": "Hu-Sawicki f(R), n=1, quasi-static chameleon mu(k,a)",
+        "mu_form": "1 + (1/3) x/(1+x), x = (k/(a M(a)))^2",
+        "k_ref_h_mpc": k_ref,
+        "gamma_lcdm_at_k_ref": g_gr,
+        "f_sigma8_z1_lcdm": next(r["f_sigma8"] for r in
+                                 gw.f_sigma8(bg.E_lcdm, 1.0, k_ref) if r["z"] == 1.0),
+        "rows": rows,
+        "scale_scan": k_scan,
     }

@@ -177,3 +177,64 @@ def test_gamma_of_the_granular_model_matches_gr_at_large_scales():
     f, g = gw.growth_index(bg.E_lcdm, mu, 0.0)
     f0, g0 = gw.growth_index(bg.E_lcdm, 1.0, 0.0)
     assert abs(g - g0) < 1e-4
+
+
+# ---------------------------------------------------------------------------
+# D12 -- the comoving distance is not the age integral
+# ---------------------------------------------------------------------------
+def test_comoving_distance_is_not_the_age_integral():
+    """D_C/(c/H0) = int da/(a^2 E); it must differ from H0*t0 = int da/(a E)."""
+    from scipy.integrate import quad
+    E = bg.E_lcdm
+    dc = bg.comoving_distance_over_cH0(E)
+    ht = bg.hubble_time_times_h0(E)[0]
+    ref = quad(lambda a: 1.0 / (a * a * E(a)), 1e-8, 1.0, epsabs=1e-12)[0]
+    assert abs(dc - ref) < 1e-5, (dc, ref)
+    assert abs(dc - ht) > 1.0, "D_C must not equal H0*t0"
+
+
+def test_luminosity_distance_identity():
+    """D_L(z) = (1+z) D_C(z) for the same background."""
+    from scipy.integrate import quad
+    E = bg.E_lcdm
+    for z in (0.5, 1.0, 2.0):
+        dc = quad(lambda a: 1.0 / (a * a * E(a)), 1.0 / (1 + z), 1.0, epsabs=1e-12)[0]
+        dl = bg.luminosity_distance(z, E)
+        assert abs(dl - (1 + z) * dc) < 1e-6, (z, dl, (1 + z) * dc)
+
+
+# ---------------------------------------------------------------------------
+# f(R) chameleon sector
+# ---------------------------------------------------------------------------
+def test_fr_mu_limits_and_monotonicity():
+    """mu -> 1 at large scales, -> 4/3 at small scales, and is monotone."""
+    from ratiss import fr
+    assert abs(float(fr.mu_fR(1e-6, 1.0, 1e-5)) - 1.0) < 1e-3
+    assert abs(float(fr.mu_fR(1e4, 1.0, 1e-5)) - 4.0 / 3.0) < 1e-2
+    ks = np.logspace(-4, 4, 50)
+    mu = np.array([float(fr.mu_fR(k, 1.0, 1e-5)) for k in ks])
+    assert np.all(np.diff(mu) > 0)
+
+
+def test_fr_growth_is_enhanced_and_screening_appears():
+    """f(R) enhances growth; smaller |f_R0| is screened back to Lambda-CDM."""
+    from ratiss import models as md
+    s = md.fr_sector()
+    rows = {r["f_R0"]: r for r in s["rows"]}
+    assert rows[1e-4]["D_rel_vs_lcdm"] > 1.02
+    d = [rows[k]["D_rel_vs_lcdm"] for k in (1e-4, 1e-5, 1e-6, 1e-7)]
+    assert d[0] > d[1] > d[2] > d[3] >= 1.0
+    assert abs(rows[1e-7]["delta_gamma"]) < 2e-3
+    assert abs(rows[1e-4]["delta_gamma"]) > 0.05
+
+
+def test_fr_is_scale_dependent_but_background_is_degenerate():
+    """The whole point: identical H0*t0, a gamma that depends on k."""
+    from ratiss import models as md
+    s = md.fr_sector()
+    gam = [row["gamma"] for row in s["scale_scan"]]
+    assert max(gam) - min(gam) > 0.03, "the signature must be scale dependent"
+    # the f(R) background is identical to Lambda-CDM by construction
+    ht = bg.hubble_time_times_h0(bg.E_fr_hs)[0]
+    assert abs(ht - bg.hubble_time_times_h0(bg.E_lcdm)[0]) < 1e-12
+    assert abs(s["rows"][1]["delta_gamma"]) > 0.01

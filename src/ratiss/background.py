@@ -54,11 +54,18 @@ def hubble_time_times_h0(E: Callable[[float], float]) -> tuple[float, float]:
 
 
 def comoving_distance_over_cH0(E: Callable[[float], float]) -> float:
-    return _quad(lambda lna: 1.0 / max(E(np.exp(lna)), 1e-30), -60.0, 0.0)[0]
+    """Line-of-sight comoving distance D_C/(c/H0) = int da / (a^2 E(a)).
+
+    The kernel is ``1/(a^2 E)``, not ``1/(a E)``: the latter is the age
+    integral returned by :func:`hubble_time_times_h0` (defect D12).
+    """
+    f = lambda lna: np.exp(-lna) / max(E(np.exp(lna)), 1e-30)
+    return _quad(f, -60.0, 0.0)[0]
 
 
 def luminosity_distance(z: float, E: Callable[[float], float]) -> float:
-    f = lambda lp: 1.0 / max(E(np.exp(lp)), 1e-30)
+    """Luminosity distance D_L/(c/H0) = (1+z) D_C(z), same kernel as D_C."""
+    f = lambda lna: np.exp(-lna) / max(E(np.exp(lna)), 1e-30)
     dc = _quad(f, -np.log1p(z), 0.0)[0]
     return (1.0 + z) * dc
 

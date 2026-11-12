@@ -14,7 +14,7 @@ From `E(a)` every background observable follows by quadrature:
 
 ```
 H0 t0            = ∫₀¹ da / (a E(a))
-D_C / (c/H0)     = ∫ da / (a E(a))
+D_C / (c/H0)     = ∫₀¹ da / (a² E(a))
 D_L(z)           = (1+z) D_C(z)
 ```
 

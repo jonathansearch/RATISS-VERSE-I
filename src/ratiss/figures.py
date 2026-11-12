@@ -248,6 +248,64 @@ def pm_shape(k):
     return pm.normalise_to_sigma8(pm.power_spectrum_shape(k), k, C.SIGMA_8)
 
 
+def fig08_fr(sector, path):
+    """Hu--Sawicki f(R): a genuine, scale-dependent, testable signature.
+
+    Left  : mu(k) and gamma(k) at fixed |f_R0| -- the shape of the signature.
+    Right : the growth factor today versus |f_R0|, with the screening limit.
+    """
+    rows = sector["rows"]
+    fR0 = np.array([r["f_R0"] for r in rows])
+    drel = np.array([r["D_rel_vs_lcdm"] for r in rows])
+    dgam = np.array([r["delta_gamma"] for r in rows])
+    scan = sector["scale_scan"]
+    k = np.array([s["k_h_mpc"] for s in scan])
+    mu = np.array([s["mu"] for s in scan])
+    gam = np.array([s["gamma"] for s in scan])
+
+    fig, ax = plt.subplots(1, 2, figsize=(11.5, 4.3))
+
+    ax[0].set_xscale("log")
+    ax[0].plot(k, mu, lw=2.4, color=C_PUR, label=r"$\mu(k)=G_{\rm eff}/G$")
+    ax[0].axhline(1.0, color="k", lw=1.0, ls=":")
+    ax[0].axhline(4.0 / 3.0, color=C_RED, lw=1.0, ls="--")
+    ax[0].text(k[0] * 1.2, 4.0 / 3.0 + 0.012, r"$4/3$ (unscreened)",
+               color=C_RED, fontsize=8.5)
+    ax[0].text(k[0] * 1.2, 1.0 + 0.012, r"$1$ (GR)", color="k", fontsize=8.5)
+    ax[0].set_xlabel(r"$k$  [$h$/Mpc]")
+    ax[0].set_ylabel(r"$\mu(k)$")
+    ax2 = ax[0].twinx()
+    ax2.plot(k, gam, lw=2.0, color=C_BLUE, ls="-.", label=r"$\gamma(k)$")
+    ax2.axhline(sector["gamma_lcdm_at_k_ref"], color=C_GREY, lw=1.0, ls=":")
+    ax2.set_ylabel(r"growth index  $\gamma$", color=C_BLUE)
+    ax2.grid(False)
+    ax[0].set_title(r"$|f_{R0}|=10^{-5}$: the coupling is scale dependent")
+    l1, la1 = ax[0].get_legend_handles_labels()
+    l2, la2 = ax2.get_legend_handles_labels()
+    ax[0].legend(l1 + l2, la1 + la2, loc="center right")
+
+    ax[1].set_xscale("log")
+    ax[1].plot(fR0, drel, "o-", lw=2.2, color=C_GREEN,
+               label=r"$D(a{=}1)/D_{\Lambda\rm CDM}$")
+    ax[1].axhline(1.0, color="k", lw=1.0, ls=":")
+    ax[1].set_xlabel(r"$|f_{R0}|$")
+    ax[1].set_ylabel(r"$D/D_{\Lambda\rm CDM}$")
+    axb = ax[1].twinx()
+    axb.plot(fR0, np.abs(dgam), "s--", lw=1.8, color=C_ORG, label=r"$|\Delta\gamma|$")
+    axb.axhline(0.01, color=C_RED, lw=1.0, ls="--")
+    axb.text(fR0[0], 0.011, "DESI / Euclid reach", color=C_RED, fontsize=8.5)
+    axb.set_yscale("log")
+    axb.set_ylabel(r"$|\Delta\gamma|$", color=C_ORG)
+    axb.grid(False)
+    ax[1].set_title("Screening: large $|f_{R0}|$ is testable, small is invisible")
+    l1, la1 = ax[1].get_legend_handles_labels()
+    l2, la2 = axb.get_legend_handles_labels()
+    ax[1].legend(l1 + l2, la1 + la2, loc="upper right")
+
+    fig.tight_layout()
+    _save(fig, path)
+
+
 # ---------------------------------------------------------------------------
 def fig07_architecture(path):
     fig, ax = plt.subplots(figsize=(9.6, 5.4))

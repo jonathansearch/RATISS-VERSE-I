@@ -56,7 +56,7 @@ def dump(name: str, obj) -> None:
 
 # ---------------------------------------------------------------------------
 def build_background() -> dict:
-    print("[1/6] background expansion")
+    print("[1/7] background expansion")
     rows = []
     for u in bg.registry():
         ht, err = bg.hubble_time_times_h0(u.E)
@@ -77,7 +77,7 @@ def build_background() -> dict:
 
 
 def build_growth() -> dict:
-    print("[2/6] linear growth")
+    print("[2/7] linear growth")
     out = []
     for u in bg.registry():
         f, gam = gw.growth_index(u.E, 1.0)
@@ -88,7 +88,7 @@ def build_growth() -> dict:
 
 
 def build_predictions() -> dict:
-    print("[3/6] predictions and falsifiability matrix")
+    print("[3/7] predictions and falsifiability matrix")
     reg = md.build_registry()
     return {
         "note": ("Every entry is recomputed from the registry; nothing is "
@@ -100,7 +100,7 @@ def build_predictions() -> dict:
 
 
 def build_granular() -> dict:
-    print("[4/6] granular sector")
+    print("[4/7] granular sector")
     sec = md.granular_sector()
     win = md.observable_window()
     return {"model": {
@@ -113,8 +113,13 @@ def build_granular() -> dict:
             "observable_window": win}
 
 
+def build_fr() -> dict:
+    print("[5/7] f(R) chameleon sector")
+    return md.fr_sector()
+
+
 def build_simulations(fast: bool) -> dict:
-    print("[5/6] particle-mesh simulations")
+    print("[6/7] particle-mesh simulations")
     out = {}
     cos = pm.Cosmology()
 
@@ -153,8 +158,8 @@ def build_simulations(fast: bool) -> dict:
     return out
 
 
-def build_figures(bg_res, pred, gran, sims) -> None:
-    print("[6/6] figures")
+def build_figures(bg_res, pred, gran, fr_res, sims) -> None:
+    print("[7/7] figures")
     reg = md.build_registry()
     fg.fig01_background(reg, FIGURES / "fig01_background.png")
     fg.fig02_growth(reg, FIGURES / "fig02_growth.png")
@@ -163,6 +168,7 @@ def build_figures(bg_res, pred, gran, sims) -> None:
     fg.fig05_observability(gran["observable_window"],
                            FIGURES / "fig05_observability.png")
     fg.fig06_simulation(sims["lcdm"], FIGURES / "fig06_simulation.png")
+    fg.fig08_fr(fr_res, FIGURES / "fig08_fr.png")
     fg.fig07_architecture(FIGURES / "fig07_architecture.png")
     for p in sorted(FIGURES.glob("*.png")):
         print(f"    {p.name}")
@@ -187,15 +193,17 @@ def main() -> int:
     dump("predictions.json", p)
     gr_res = build_granular()
     dump("granular.json", gr_res)
+    fr_res = build_fr()
+    dump("fr.json", fr_res)
 
     if args.fast:
         sims = {"lcdm": _toy_sim(), "granular_demo": _toy_sim()}
-        print("[5/6] simulations skipped (--fast); using stored demo field")
+        print("[6/7] simulations skipped (--fast); using stored demo field")
     else:
         sims = build_simulations(fast=False)
         dump("simulations.json", sims)
 
-    build_figures(b, p, gr_res, sims)
+    build_figures(b, p, gr_res, fr_res, sims)
 
     manifest = {
         "ratsis_version": __version__,

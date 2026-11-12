@@ -13,5 +13,6 @@ levels at once: physically (every prediction states what would kill it)
 and computationally (anyone can rerun and compare hashes).
 """
 
-__version__ = "1.0.0"
-__all__ = ["background", "growth", "granular", "pm", "models", "figures", "constants"]
+__version__ = "1.1.0"
+__all__ = ["background", "growth", "granular", "fr", "pm", "models",
+           "figures", "constants"]

@@ -49,6 +49,26 @@ For the models in the registry the spread in `γ` is `0.554 → 0.592`, i.e.
 **7 %** — an order of magnitude above the projected sensitivity. If the
 universe is one of these, the next data release will see it.
 
+### 1a. The sharpest case: f(R) chameleon screening
+
+`ΛCDM` and Hu–Sawicki `f(R)` share `E(a)` **exactly** (designer background).
+With the chameleon coupling `μ(k, a) = 1 + (1/3) x/(1+x)`, `x = (k/aM(a))²`,
+the two are nonetheless separable — and, unlike a bare scale-free `μ`, the
+signature is *scale dependent*, which is what makes it falsifiable by shape
+and not only by amplitude. This sector is reported in `results/fr.json` and
+`figures/fig08_fr.png`; the sealed registry is unchanged (see D6).
+
+| `|f_R0|` | Compton wavelength | `μ` at `k=0.1` | `γ` | `|Δγ|` vs ΛCDM |
+|---|---|---|---|---|
+| `10⁻⁴` | 24.3 Mpc/h | 1.285 | 0.432 | 0.123 |
+| `10⁻⁵` | 7.7 Mpc/h | 1.123 | 0.499 | 0.055 |
+| `10⁻⁶` | 2.4 Mpc/h | 1.019 | 0.546 | 0.009 |
+| `10⁻⁷` | 0.8 Mpc/h | 1.002 | 0.554 | 0.001 (screened) |
+
+Large `|f_R0|` is testable well above the DESI/Euclid reach; small `|f_R0|`
+is screened back onto ΛCDM and is invisible. The transition is the
+observable content.
+
 ---
 
 ## 2. The granular universe: the bound, and the gap
