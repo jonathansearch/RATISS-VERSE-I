@@ -80,6 +80,14 @@ The **growth index** `γ = ln f / ln Ω_m` is the quantity that does separate
 them, and it separates them at the percent level — inside the reach of DESI
 and Euclid.
 
+Beyond the registry, a dedicated **f(R) chameleon sector** (`results/fr.json`,
+`figures/fig08_fr.png`) turns the vacuous `f(R)` row into a genuine,
+*scale-dependent* prediction: with `μ(k, a) = 1 + (1/3) x/(1+x)`, `x =
+(k/aM(a))²`, the growth index falls to `0.499` for `|f_R0| = 10⁻⁵` while the
+screened `|f_R0| = 10⁻⁶` model returns to ΛCDM. Same background, different
+growth, testable by shape. The sealed registry is left untouched, exactly as
+the granular cut-off lives in its own sector.
+
 ---
 
 ## The granular universe
@@ -192,6 +200,8 @@ Outputs land in `results/` (JSON, sealed) and `figures/` (PNG).
 | Growth index: the only discriminator found | Effective coupling of the granular universe |
 | ![observability](figures/fig05_observability.png) | ![simulation](figures/fig06_simulation.png) |
 | The 5.8-decade gap | Particle-mesh simulation and `P(k)` |
+| ![fr](figures/fig08_fr.png) | ![architecture](figures/fig07_architecture.png) |
+| f(R) chameleon coupling: scale-dependent, testable | One solver chain, every number recomputed |
 
 ---
 
@@ -204,6 +214,7 @@ ratiss-universe/
 │   ├── background.py    E(a) for every universe, quadrature with error bars
 │   ├── growth.py        D'' + (2+dlnH/dN)D' − (3/2)Ω_m μ(k,a) D = 0
 │   ├── granular.py      the r_c force law and its effective coupling μ(x)
+│   ├── fr.py            Hu-Sawicki f(R): chameleon μ(k,a), screening
 │   ├── pm.py            particle-mesh N-body engine
 │   ├── models.py        the universe registry and the falsifiability matrix
 │   └── figures.py       rendering only, no physics
